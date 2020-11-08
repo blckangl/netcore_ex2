@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ex2.Controllers
 {
+    
+    //http://localhost:5000/api/strings
     [ApiController]
     [Route("api/strings")]
     public class StringController
@@ -13,6 +15,8 @@ namespace ex2.Controllers
             _stringService = stringService;
         }
 
+        
+        // GET http://localhost:5000/api/strings
         [HttpGet()]
         public IActionResult getAllString()
         {
@@ -20,6 +24,9 @@ namespace ex2.Controllers
             return result;
         }   
         
+        
+        // GET http://localhost:5000/api/strings/{id}
+
         [HttpGet("{id}")]
         public IActionResult getStringByIndex([FromRoute]int id)
         {
@@ -38,7 +45,8 @@ namespace ex2.Controllers
         }  
         
         
-        // POST api/strings/add
+        // POST  http://localhost:5000/api/strings/add
+
         [HttpPost("add")]
         public IActionResult AddString([FromBody]StringItem item)
         {
@@ -50,6 +58,8 @@ namespace ex2.Controllers
         }
 
       
+        // Put  http://localhost:5000/api/strings/{id}
+
         [HttpPut("{id}")]
         public IActionResult UpdateStringItem(int id,StringItem item)
         {
@@ -59,6 +69,8 @@ namespace ex2.Controllers
             result.StatusCode = 202;
             return result;
         }
+
+        // Delete  http://localhost:5000/api/strings/{id}
 
         [HttpDelete("{id}")]
         public IActionResult DeleteItem(int id)
