@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\netcore\\ex2\\ex2.csproj",
+      "projectUniqueName": "D:\\netcore_ex2\\ex2.csproj",
       "projectName": "ex2",
-      "projectPath": "D:\\netcore\\ex2\\ex2.csproj",
+      "projectPath": "D:\\netcore_ex2\\ex2.csproj",
       "packagesPath": "C:\\Users\\dhia\\.nuget\\packages\\",
-      "outputPath": "D:\\netcore\\ex2\\obj\\",
+      "outputPath": "D:\\netcore_ex2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dhia\\AppData\\Roaming\\NuGet\\NuGet.Config",

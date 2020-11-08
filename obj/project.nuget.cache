@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BJx3+h6KZf9JdNJi1J7Y9nlhPdvoF613vdhYv1BR0l521iHRWxyOFcAWR3aDU0CS5aK/qrwVon1hOCcdTNNDSA==",
+  "dgSpecHash": "VqyCMC2+6SXLFInlu+01JfFW/ECwJpfc7oXzc3Jfviu5muapzAqhXQcG8tqY+janfNMR7gFDyINDKu+XPSzmTg==",
   "success": true,
-  "projectFilePath": "D:\\netcore\\ex2\\ex2.csproj",
+  "projectFilePath": "D:\\netcore_ex2\\ex2.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

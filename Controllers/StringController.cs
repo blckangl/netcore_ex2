@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ex2.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ex2.Controllers
 {
@@ -20,7 +21,7 @@ namespace ex2.Controllers
         }   
         
         [HttpGet("{id}")]
-        public IActionResult getStringByIndex(int id)
+        public IActionResult getStringByIndex([FromRoute]int id)
         {
             var result = new JsonResult(null);
 
@@ -36,14 +37,30 @@ namespace ex2.Controllers
             return result;
         }  
         
-        [HttpGet("add/{name}")]
-        public IActionResult AddString(string name)
+        
+        // POST api/strings/add
+        [HttpPost("add")]
+        public IActionResult AddString([FromBody]StringItem item)
         {
-            _stringService.AddString(name);
-            var result = new JsonResult(name);
+         
+            _stringService.AddString(item);
+            var result = new JsonResult(item);
             result.StatusCode = 201;
             return result;
-        } 
+        }
+
+      
+        [HttpPut("/test")]
+        public IActionResult UpdateStringItem()
+        {
+            var result = new JsonResult("newItem");
+            return result;
+            
+            // var newItem = _stringService.UpdateItem(id,item);
+            // var result = new JsonResult(newItem);
+            // result.StatusCode = 202;
+            // return result;
+        }
        
     }
 }
