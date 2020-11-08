@@ -48,5 +48,24 @@ namespace ex2
 
             return null;
         }
+        
+        public bool DeleteItem(int id)
+        {
+            
+            //method1
+            // var selectedItem = list.Where(x => x.Id == id).Select(x => x).ToList();
+            // selectedItem[0].name = item.name;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].Id == id)
+                {
+                    // list.Remove(list[i]);
+                    return list.Remove(list[i]);
+                }
+            }
+
+            return false;
+        }
     }
 }

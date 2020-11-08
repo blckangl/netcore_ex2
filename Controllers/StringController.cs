@@ -50,16 +50,23 @@ namespace ex2.Controllers
         }
 
       
-        [HttpPut("/test")]
-        public IActionResult UpdateStringItem()
+        [HttpPut("{id}")]
+        public IActionResult UpdateStringItem(int id,StringItem item)
         {
-            var result = new JsonResult("newItem");
-            return result;
             
-            // var newItem = _stringService.UpdateItem(id,item);
-            // var result = new JsonResult(newItem);
-            // result.StatusCode = 202;
-            // return result;
+            var newItem = _stringService.UpdateItem(id,item);
+            var result = new JsonResult(newItem);
+            result.StatusCode = 202;
+            return result;
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteItem(int id)
+        {
+            var isDeleted = _stringService.DeleteItem(id);
+            var result = new JsonResult(isDeleted);
+            result.StatusCode = 202;
+            return result;
         }
        
     }
